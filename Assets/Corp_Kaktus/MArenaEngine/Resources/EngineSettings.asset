@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     validate: 0
-    controlClientBuild: 1
+    controlClientBuild: 0
     debugLevel: 0
     clientLoader: {fileID: 650126130577819635, guid: 216bbae4d086ca442855b4fb6ad3c59d, type: 3}
     controllerLoader: {fileID: 1409566061415376257, guid: 8ef3c368fa650444d8bd5da4f8e1df8b, type: 3}

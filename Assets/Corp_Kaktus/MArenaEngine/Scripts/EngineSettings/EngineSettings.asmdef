@@ -1,0 +1,16 @@
+{
+    "name": "EngineSettings",
+    "rootNamespace": "",
+    "references": [
+        "GUID:10782dcafd1e5354eb482401a0415467"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

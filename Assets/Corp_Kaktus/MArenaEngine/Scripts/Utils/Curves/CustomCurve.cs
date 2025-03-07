@@ -23,6 +23,9 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Utils.Curves
             
             return curve;
         }
+        // todo
+        // reimagine all curves
+        
 
     }
 }

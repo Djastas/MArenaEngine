@@ -2,6 +2,8 @@
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components.Transform
 {
+    // todo
+    // Change namespace to Utils
     public class CopyTransformComponent : MonoBehaviour
     {
         [SerializeField] private UnityEngine.Transform target;

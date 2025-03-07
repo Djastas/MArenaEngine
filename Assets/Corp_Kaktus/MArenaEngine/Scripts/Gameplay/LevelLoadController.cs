@@ -6,5 +6,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay
     {
         // todo
         // create
+        // todo
+        // Move to network 
     }
 }

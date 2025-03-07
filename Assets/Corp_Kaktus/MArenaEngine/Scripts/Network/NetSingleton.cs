@@ -1,7 +1,7 @@
 ﻿using Unity.Netcode;
 using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network
 {
     public class NetSingleton<T> : NetworkBehaviour where T : NetSingleton<T>
     {

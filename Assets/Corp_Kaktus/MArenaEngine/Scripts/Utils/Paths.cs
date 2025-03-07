@@ -3,5 +3,7 @@
     public static class Paths
     {
         public const string RootFolder = "Assets/Corp_Kaktus/MArenaEngine/";
+        
+        // add auto create folder check
     }
 }
