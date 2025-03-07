@@ -2755,6 +2755,7 @@ GameObject:
   - component: {fileID: 6488733025442716959}
   - component: {fileID: 6968785024494168586}
   - component: {fileID: 277392531157383496}
+  - component: {fileID: 5949323886755378664}
   m_Layer: 0
   m_Name: XRRigBaseWLegs
   m_TagString: Player
@@ -2925,6 +2926,20 @@ MonoBehaviour:
   - {fileID: 3276620853771684495}
   - {fileID: 7830657426311183113}
   - {fileID: 7983103729882252648}
+--- !u!114 &5949323886755378664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667087780368299676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cfc76a927649a4b9d6decfb8a07ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4667087780368299676}
 --- !u!1 &4815892197901207322
 GameObject:
   m_ObjectHideFlags: 0
