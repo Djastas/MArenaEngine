@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca4044a164d49cc866d2f14d381c512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: GameEntryScene
   setupScene: FirstSetupScene
 --- !u!1 &1907836556
 GameObject:
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_MaxPayloadSize: 6144
   m_HeartbeatTimeoutMS: 500
   m_ConnectTimeoutMS: 1000
-  m_MaxConnectAttempts: 60
+  m_MaxConnectAttempts: 20
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
     Address: 127.0.0.1
@@ -435,7 +435,7 @@ MonoBehaviour:
     NetworkProfilingMetrics: 1
     OldPrefabList: []
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
 --- !u!4 &1928889261
 Transform:
   m_ObjectHideFlags: 0

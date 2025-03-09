@@ -6,8 +6,9 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Loaders
 {
     public class SceneLoader : Singleton<SceneLoader>
     {
-        public void Start()
+        protected override void Awake()
         {
+            base.Awake();
             if (settings.controlClientBuild)
             {
                 Instantiate(settings.controllerLoader);

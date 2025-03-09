@@ -22,7 +22,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network
             
             if (role == MultiplayerRoleFlags.Server)
             {
-                NetworkManager.Singleton.StartHost();
+                NetworkManager.Singleton.StartServer();
                 
             }
             else

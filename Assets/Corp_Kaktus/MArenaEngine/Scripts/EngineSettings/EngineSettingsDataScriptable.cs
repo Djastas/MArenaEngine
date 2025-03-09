@@ -36,7 +36,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
 
 #else
             Debug.LogError("EngineSettingsDataScriptable Not Exist");
-            NetDebugger.instance.Log("EngineSettingsDataScriptable Not Exist");
+            // NetDebugger.instance.Log("EngineSettingsDataScriptable Not Exist");
             return null;
 #endif
         }

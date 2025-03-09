@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.Multiplayer;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash
@@ -18,7 +19,9 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash
         
         public void Start()
         {
-            SceneManager.LoadScene(setupScene);
+            SceneManager.LoadScene(MultiplayerRolesManager.ActiveMultiplayerRoleMask == MultiplayerRoleFlags.Server
+                ? level
+                : setupScene);
         }
     }
 }
