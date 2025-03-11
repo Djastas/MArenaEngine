@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6771bc788aad4ed2808112ea4bcdc9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: FirstSetupScene
+  sceneToLoad: ConnectScene
   loadOnStart: 1
 --- !u!4 &913496852
 Transform:
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6771bc788aad4ed2808112ea4bcdc9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: FirstSetupScene
+  sceneToLoad: ConnectScene
   loadOnStart: 1
 --- !u!4 &2146638796
 Transform:

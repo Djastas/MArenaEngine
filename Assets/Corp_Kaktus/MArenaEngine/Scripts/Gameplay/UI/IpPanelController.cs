@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
 {
@@ -9,17 +9,25 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
     {
         [SerializeField]  private TMP_InputField ipInputField;
         [SerializeField] private TMP_Text statusText;
-        [SerializeField] private string gameScene = "GameEntryScene";
         
-        
-        
+        public UnityEvent onSuccessConnect;
+
+
+        private void Start()
+        {
+            NetworkManager.Singleton.OnConnectionEvent += (a,b) => {
+                if (b.EventType == ConnectionEvent.ClientDisconnected) { Fail(); } else { Success(); }
+            } ;
+
+            // todo
+            // LoadIPFromRuntimeSettings
+            SetIp();
+        }
+
         public void SetIp()
         {
             Network.Utils.Utils.SetIp(ipInputField.text == "" ?  "127.0.0.1": ipInputField.text);
             
-            NetworkManager.Singleton.OnConnectionEvent += (a,b) => {
-                if (b.EventType == ConnectionEvent.ClientDisconnected) { Fail(); } else { Success(); }
-            } ;
             statusText.text = "Connect now...";
             
             var result = NetworkManager.Singleton.StartClient();
@@ -33,9 +41,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
         private void Success()
         {
             statusText.text = "Success connect to server";
-            SceneManager.LoadScene(gameScene);
+            onSuccessConnect?.Invoke();
         }
-        
-        
     }
 }

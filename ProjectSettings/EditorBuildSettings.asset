@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/EntryScene.unity
     guid: 6f4805569b7d60f4e926927dbfc017dd
   - enabled: 1
-    path: Assets/Corp_Kaktus/MArenaEngine/Scenes/FirstSetupScene.unity
+    path: Assets/Corp_Kaktus/MArenaEngine/Scenes/ConnectScene.unity
     guid: 996511e5589e0b247b477ead6a4d6257
   - enabled: 1
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/GameEntryScene.unity
