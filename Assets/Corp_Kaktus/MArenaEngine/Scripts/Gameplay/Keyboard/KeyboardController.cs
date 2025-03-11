@@ -18,5 +18,10 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Keyboard
             }*/
             keyboardInputField.text += character;
         }
+
+        public void DeleteChar(int count)
+        {
+            keyboardInputField.text = keyboardInputField.text.Remove(keyboardInputField.text.Length - count,count);
+        }
     }
 }
