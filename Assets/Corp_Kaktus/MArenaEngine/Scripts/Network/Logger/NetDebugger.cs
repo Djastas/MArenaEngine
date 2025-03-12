@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Corp_Kaktus.MArenaEngine.Scripts.Utils;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,7 +16,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Logger
         {
             if (!NetworkManager.Singleton || !NetworkManager.Singleton.IsConnectedClient)
             {
-                Debug.LogWarning($"Use netDebugger, but not connected. message: {message}");
+                Debug.LogWarning($"[netDebugger] Use netDebugger, but not connected. message: {message}");
                 Messages.Add(new Message(message, 404));
                 return;
             }
@@ -30,7 +29,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Logger
         {
             var message = new Message(messageValue, clientId);
             Messages.Add(message);
-            
+            Debug.Log($"[netDebugger] Server get message form client: {clientId}");
+            Debug.Log($"[netDebugger] message: {messageValue}");
             // todo
             // add net debug setting
             // Debug.Log("server get message");

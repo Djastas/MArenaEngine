@@ -1017,6 +1017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ipInputField: {fileID: 829598672}
   statusText: {fileID: 1383369416}
+  clientPlayerPrefab: {fileID: 4667087780368299676, guid: faf7d8258cab76748a8fe3bdd6fefdab, type: 3}
+  consolePlayerPrefab: {fileID: 4516416754021888294, guid: 6eb36d236697449429b9ee3cdea90f2b, type: 3}
   onSuccessConnect:
     m_PersistentCalls:
       m_Calls:
