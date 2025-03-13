@@ -1,0 +1,17 @@
+{
+    "name": "Gameplay.Calibration.Test",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2b4f057287dcfcc4d94d6e54d0ed814a",
+        "GUID:10782dcafd1e5354eb482401a0415467"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

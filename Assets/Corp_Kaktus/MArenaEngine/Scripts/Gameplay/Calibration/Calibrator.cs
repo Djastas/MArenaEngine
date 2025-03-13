@@ -38,7 +38,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Calibration
             GetPoint();
         }
 
-        private void GetPoint()
+        public void GetPoint()
         {
             if (CalibrationController.instance.currentStep == CalibrationSteps.SetPointA)
             {
