@@ -230,6 +230,7 @@ MonoBehaviour:
   objects:
   - {fileID: 1928889258}
   - {fileID: 1001831193}
+  - {fileID: 0}
 --- !u!4 &554627595
 Transform:
   m_ObjectHideFlags: 0
@@ -563,7 +564,7 @@ MonoBehaviour:
   ConnectionData:
     Address: 127.0.0.1
     Port: 7777
-    ServerListenAddress: 127.0.0.1
+    ServerListenAddress: 0.0.0.0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
@@ -584,7 +585,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1928889259}
-    PlayerPrefab: {fileID: 4667087780368299676, guid: faf7d8258cab76748a8fe3bdd6fefdab, type: 3}
+    PlayerPrefab: {fileID: 0}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: a036291245cd11e49974c1932c5243aa, type: 2}

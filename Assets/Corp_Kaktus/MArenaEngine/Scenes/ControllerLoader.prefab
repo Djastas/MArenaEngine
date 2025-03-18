@@ -401,6 +401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3b10c79c207c040bc53b3b617572f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1229708362217471430
 GameObject:
   m_ObjectHideFlags: 0
