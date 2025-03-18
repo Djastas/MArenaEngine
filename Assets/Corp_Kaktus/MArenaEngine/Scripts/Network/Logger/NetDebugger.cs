@@ -14,7 +14,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Logger
 
         public void Log(string message)
         {
-            if (!NetworkManager.Singleton || !NetworkManager.Singleton.IsConnectedClient)
+            if (!NetworkManager.Singleton)
             {
                 Debug.LogWarning($"[netDebugger] Use netDebugger, but not connected. message: {message}");
                 Messages.Add(new Message(message, 404));
