@@ -2,63 +2,52 @@
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
 {
+    /// <summary>
+    /// class for draw one line in game view
+    /// </summary>
     public struct LineDrawer
     {
-        private LineRenderer lineRenderer;
-        private float lineSize;
+        private LineRenderer _lineRenderer;
+        private float _lineSize;
 
-        public LineDrawer(float lineSize = 0.2f)
+        private void Init(float lineSize = 0.05f)
         {
-            GameObject lineObj = new GameObject("LineObj");
-            lineRenderer = lineObj.AddComponent<LineRenderer>();
-            //Particles/Additive
-            lineRenderer.material = new Material(Shader.Find("Hidden/Internal-Colored"));
+            if (_lineRenderer != null) return;
+            
+            var lineObj = new GameObject("LineObj");
+            _lineRenderer = lineObj.AddComponent<LineRenderer>();
 
-            this.lineSize = lineSize;
-        }
+            _lineRenderer.material = new Material(Shader.Find("Hidden/Internal-Colored"));
 
-        private void init(float lineSize = 0.05f)
-        {
-            if (lineRenderer == null)
-            {
-                GameObject lineObj = new GameObject("LineObj");
-                lineRenderer = lineObj.AddComponent<LineRenderer>();
-                //Particles/Additive
-                lineRenderer.material = new Material(Shader.Find("Hidden/Internal-Colored"));
-
-                this.lineSize = lineSize;
-            }
+            _lineSize = lineSize;
         }
 
         //Draws lines through the provided vertices
         public void DrawLineInGameView(Vector3 start, Vector3 end, Color color)
         {
-            if (lineRenderer == null)
-            {
-                init(0.05f);
-            }
+            if (!_lineRenderer) { Init(); }
 
             //Set color
-            lineRenderer.startColor = color;
-            lineRenderer.endColor = color;
+            _lineRenderer.startColor = color;
+            _lineRenderer.endColor = color;
 
             //Set width
-            lineRenderer.startWidth = lineSize;
-            lineRenderer.endWidth = lineSize;
+            _lineRenderer.startWidth = _lineSize;
+            _lineRenderer.endWidth = _lineSize;
 
             //Set line count which is 2
-            lineRenderer.positionCount = 2;
+            _lineRenderer.positionCount = 2;
 
-            //Set the postion of both two lines
-            lineRenderer.SetPosition(0, start);
-            lineRenderer.SetPosition(1, end);
+            //Set the position of both two lines
+            _lineRenderer.SetPosition(0, start);
+            _lineRenderer.SetPosition(1, end);
         }
 
         public void Destroy()
         {
-            if (lineRenderer != null)
+            if (_lineRenderer != null)
             {
-                UnityEngine.Object.Destroy(lineRenderer.gameObject);
+                Object.Destroy(_lineRenderer.gameObject);
             }
         }
     }
