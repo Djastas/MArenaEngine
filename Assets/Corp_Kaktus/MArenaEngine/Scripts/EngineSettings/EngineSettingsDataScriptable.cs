@@ -1,47 +1,40 @@
 ﻿using System;
-
 using Corp_Kaktus.MArenaEngine.Scripts.Utils;
 using UnityEditor;
 using UnityEngine;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
 {
+    /// <summary>
+    /// ScriptableObject for managing(save\load) settings data
+    /// </summary>
     public class EngineSettingsDataScriptable : ScriptableObject
     {
-        public static EngineSettingsDataScriptable Instance;
-        public EngineSettingsDataObject data;
+        [SerializeField] private EngineSettingsDataObject data;
+        private static EngineSettingsDataScriptable _instance;
         
-        public const string SettingsAssetPath = "Resources/"; // todo 
-        public const string SettingsAssetName = "EngineSettings"; // todo 
-        // rename engine, repath
+        private const string SettingsAssetPath = "Resources/";
+        private const string SettingsAssetName = "MainSettings";
 
-        public static EngineSettingsDataScriptable LoadData()
+        public static EngineSettingsDataObject LoadData() => LoadInstance().data;
+
+        public static EngineSettingsDataScriptable LoadInstance()
         {
-            if (Instance != null)
-            {
-                return Instance;
-            }
-            // var settings = AssetDatabase.LoadAssetAtPath<EngineSettingsDataScriptable>(SettingsAssetPath);
-            var settings = Resources.Load<EngineSettingsDataScriptable>(SettingsAssetName);
+            if (_instance) { return _instance; }
+            _instance = Resources.Load<EngineSettingsDataScriptable>(SettingsAssetName);
            
-            if (settings != null)
-            {
-                Instance = settings;
-                return settings;
-            }
+            if (_instance) { return _instance; }
 
            
 #if UNITY_EDITOR
             return Init();
 
 #else
-            Debug.LogError("EngineSettingsDataScriptable Not Exist");
-            // NetDebugger.instance.Log("EngineSettingsDataScriptable Not Exist");
+            Debug.LogError("EngineSettingsDataScriptable not exist");
             return null;
 #endif
         }
 
-        
 #if UNITY_EDITOR
         private static EngineSettingsDataScriptable Init()
         {

@@ -1,12 +1,15 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
 {
+    /// <summary>
+    /// Main settings object.
+    /// Put settings here. Access from EngineSettings -> EngineSettingsDataScriptable -> LoadData()
+    /// </summary>
     [Serializable]
-    public class EngineSettingsDataObject
+    public class EngineSettingsDataObject 
     {
         public bool validate = true;
         
@@ -28,12 +31,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
         public void Validate()
         {
             if (!validate) { return; }
-            
-            
-            /*SceneCheck(clientScene,"clientScene");
-            SceneCheck(uiScene,"uiScene");*/
+            // put here checks
         }
-
         public void SceneCheck(string sceneName,string scenePropertyName)
         {
             if (!SceneInBuildSettings(sceneName))
@@ -46,7 +45,6 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
             for (var sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
                 if (SceneManager.GetSceneByBuildIndex(sceneIndex).name == sceneName)
                     return true;
-
             return false;
         }
     }

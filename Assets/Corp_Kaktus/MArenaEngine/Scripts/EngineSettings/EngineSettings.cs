@@ -3,6 +3,6 @@
     public static class EngineSettings
     {
         public static EngineSettingsDataObject settings 
-            => EngineSettingsDataScriptable.LoadData().data;
+            => EngineSettingsDataScriptable.LoadData();
     }
 }
