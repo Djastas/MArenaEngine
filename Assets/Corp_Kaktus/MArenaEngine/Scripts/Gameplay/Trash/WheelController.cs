@@ -7,14 +7,16 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash
     {
         [SerializeField] private ObjectSpawner spawner;
 
+        [SerializeField] private ProjTest projector;
+
         private void Start()
         {
-            spawner.onSpawn.AddListener(Init);
+            // spawner.onSpawn.AddListener(Init);
         }
 
-        private void Init(GameObject spawnedObject)
+        public void Init(GameObject spawnedObject)
         {
-            
+            projector.targetsA[0] = spawnedObject.transform;
         }
         
     }

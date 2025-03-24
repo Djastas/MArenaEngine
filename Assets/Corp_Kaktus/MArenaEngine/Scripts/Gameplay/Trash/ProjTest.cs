@@ -7,8 +7,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash
     public class ProjTest : MonoBehaviour
     {
         
-        [SerializeField] private List<Transform> targetsA;
-        [SerializeField] private List<Transform> targetsB;
+        public List<Transform> targetsA;
+        public List<Transform> targetsB;
         [Range(0,1f)] [SerializeField] private float factor;
         
         

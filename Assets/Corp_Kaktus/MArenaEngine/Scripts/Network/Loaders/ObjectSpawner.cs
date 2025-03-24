@@ -6,18 +6,23 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Loaders
 {
     public class ObjectSpawner : MonoBehaviour
     {
+        public string id;
         public UnityEvent<GameObject> onSpawn;
         
         [SerializeField] private GameObject serverPrefab;
+
+       
+        
+        private GameObject _spawnedObject;
         private void Start()
         {
             if (!NetworkManager.Singleton.IsServer) return;
-            var instance = Instantiate(serverPrefab,transform.position,transform.rotation,transform);
-            var instanceNetworkObject = instance.GetComponent<NetworkObject>();
-            var instanceReceiver = instance.GetComponent<ObjectSpawnReceiver>();
+            _spawnedObject = Instantiate(serverPrefab,transform.position,transform.rotation,transform);
+            var instanceNetworkObject = _spawnedObject.GetComponent<NetworkObject>();
+            var instanceReceiver = _spawnedObject.GetComponent<ObjectSpawnReceiver>();
             if (instanceReceiver)
             {
-                instanceReceiver.onSpawn.AddListener(() => { onSpawn?.Invoke(instance);});
+                instanceReceiver.findLinkId = id;
             }
             else
             {
