@@ -3,7 +3,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Loaders
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Trash
 {
     public class ObjectSpawnReceiver : NetworkBehaviour
     {

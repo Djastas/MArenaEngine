@@ -2,8 +2,9 @@
 using Unity.Netcode;
 using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Utils
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components.Selectors
 {
+    [AddComponentMenu("Corp_Kaktus/MArenaEngine/Selectors/Only Server Object")]
     public class OnlyServerObject : NetworkBehaviour
     {
         [Tooltip("destroyed if object not on server")]

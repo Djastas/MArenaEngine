@@ -1,4 +1,4 @@
-﻿using Corp_Kaktus.MArenaEngine.Scripts.Network.Loaders;
+﻿using Corp_Kaktus.MArenaEngine.Scripts.Network.Trash;
 using UnityEngine;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash

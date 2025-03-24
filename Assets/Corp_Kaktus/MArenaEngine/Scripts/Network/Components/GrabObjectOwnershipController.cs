@@ -3,9 +3,10 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Trash
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components
 {
     [RequireComponent(typeof(XRGrabInteractable))]
+    [AddComponentMenu("Corp_Kaktus/MArenaEngine/Network/Grab Object Ownership Controller")]
     public class GrabObjectOwnershipController : NetworkBehaviour
     {
         private void Start()
@@ -15,7 +16,6 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Trash
 
         private void ChangeOwnership(BaseInteractionEventArgs activateEventArgs)
         {
-            Debug.Log(activateEventArgs.interactorObject.transform.name);
             ChangeOwnershipRpc(activateEventArgs.interactorObject.transform.GetComponentInParent<NetworkObject>().OwnerClientId);
         }
         

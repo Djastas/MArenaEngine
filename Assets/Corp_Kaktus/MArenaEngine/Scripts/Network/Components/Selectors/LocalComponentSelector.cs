@@ -2,9 +2,10 @@
 using Corp_Kaktus.MArenaEngine.Scripts.Network.RoleControl;
 using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Loaders
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components.Selectors
 {
-    public class LocalObjectComponentSelector : MonoBehaviour
+    [AddComponentMenu("Corp_Kaktus/MArenaEngine/Selectors/Local Object Component Selector")]
+    public class LocalComponentSelector : MonoBehaviour
     {
         [SerializeField] private List<Behaviour> onlyClientComponents;
         [SerializeField] private List<Behaviour> onlyConsoleComponents;

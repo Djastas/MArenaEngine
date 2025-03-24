@@ -1,5 +1,6 @@
 ﻿using System;
 using Corp_Kaktus.MArenaEngine.Scripts.Network;
+using Corp_Kaktus.MArenaEngine.Scripts.Network.Utils;
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;

@@ -27,10 +27,5 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Utils
                 throw;
             }
         }
-
-        public static void SetPlayerPrefab(GameObject playerPrefab)
-        {
-            NetworkManager.Singleton.NetworkConfig.PlayerPrefab = playerPrefab;
-        }
     }
 }

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using Corp_Kaktus.MArenaEngine.Scripts.Network.Logger;
 using Corp_Kaktus.MArenaEngine.Scripts.Network.RoleControl;
+using Corp_Kaktus.MArenaEngine.Scripts.Network.Utils;
 using Unity.Netcode;
 using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components
 {
+    [AddComponentMenu("Corp_Kaktus/MArenaEngine/Network/Spawn Controller")]
     public class SpawnController : NetSingleton<SpawnController>
     {
         [SerializeField] private List<GameObject> spawnObjects;
@@ -28,17 +30,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network
             NetDebugger.instance.Log("[Server] Send spawn id request");
             OnClientConnectClientSideRpc(RpcTarget.Single(id, RpcTargetUse.Temp));
         }
-        
-        [Rpc(SendTo.Server)]
-        private void OnClientReceiveSpawnIDServerSideRpc(int spawnId, ulong ownerId)
-        {
-            if (!spawnObjects[spawnId]) { return; }
-            var spawnObject = Instantiate(spawnObjects[spawnId]);
-            var instanceNetworkObject = spawnObject.GetComponent<NetworkObject>();
-            instanceNetworkObject.SpawnWithOwnership(ownerId);
-        }
-        
-        
+
         [Rpc(SendTo.SpecifiedInParams)]
         private void OnClientConnectClientSideRpc(RpcParams rpcParams)
         {
@@ -51,6 +43,15 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network
                 _ => throw new ArgumentOutOfRangeException()
             };
             OnClientReceiveSpawnIDServerSideRpc(spawnID,NetworkManager.LocalClientId);
+        }
+
+        [Rpc(SendTo.Server)]
+        private void OnClientReceiveSpawnIDServerSideRpc(int spawnId, ulong ownerId)
+        {
+            if (!spawnObjects[spawnId]) { return; }
+            var spawnObject = Instantiate(spawnObjects[spawnId]);
+            var instanceNetworkObject = spawnObject.GetComponent<NetworkObject>();
+            instanceNetworkObject.SpawnWithOwnership(ownerId);
         }
     }
 }

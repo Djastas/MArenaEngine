@@ -1,10 +1,10 @@
 ﻿using System;
 using Corp_Kaktus.MArenaEngine.Scripts.Network.RoleControl;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Loaders
+namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components.Selectors
 {
+    [AddComponentMenu("Corp_Kaktus/MArenaEngine/Selectors/Local Object Selector")]
     public class LocalObjectSelector : MonoBehaviour
     {
         [Tooltip("true - instantiate need object. false - destroy not need object.")]

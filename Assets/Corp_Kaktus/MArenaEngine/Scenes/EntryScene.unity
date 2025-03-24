@@ -174,10 +174,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 184338088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3b10c79c207c040bc53b3b617572f1, type: 3}
+  m_Script: {fileID: 11500000, guid: aa6dad87605848d38d15f72852ae2d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSuccess:
+  onServerStartSuccess:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 184338089}
@@ -193,6 +193,7 @@ MonoBehaviour:
           m_StringArgument: GameEntryScene
           m_BoolArgument: 0
         m_CallState: 2
+  startServerOnStart: 1
 --- !u!1 &356159802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9221481043875637401, guid: acdce202e87030b47850d7f403c1be0a, type: 3}

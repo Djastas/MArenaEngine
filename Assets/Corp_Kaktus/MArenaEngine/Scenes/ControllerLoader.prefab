@@ -357,54 +357,8 @@ MonoBehaviour:
   messagePrefab: {fileID: 4623905463967567220}
   messagesParent: {fileID: 823202943536397123}
   messageText: {fileID: 6286414959447253365}
+  maxMessages: 20
   messageControllers: []
---- !u!1 &936385645239162658
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6419533875834452447}
-  - component: {fileID: 4439234716139580578}
-  m_Layer: 0
-  m_Name: AuroConnector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6419533875834452447
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936385645239162658}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3091982674188555458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4439234716139580578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936385645239162658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3b10c79c207c040bc53b3b617572f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onSuccess:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1229708362217471430
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +744,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 679967019848589901}
-  - {fileID: 6419533875834452447}
   - {fileID: 3873676414232444134}
   - {fileID: 6405941212593339667}
   m_Father: {fileID: 0}
@@ -8365,6 +8318,7 @@ MonoBehaviour:
   messagePrefab: {fileID: 2620839095628394093, guid: 1121216719cc08640b344266f4b53d02, type: 3}
   messagesParent: {fileID: 2492651435240289678}
   messageText: {fileID: 0}
+  maxMessages: 20
   messageControllers: []
 --- !u!1 &8413851998488728400
 GameObject:
