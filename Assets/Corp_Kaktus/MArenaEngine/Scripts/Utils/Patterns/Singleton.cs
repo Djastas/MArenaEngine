@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
+namespace Corp_Kaktus.MArenaEngine.Scripts.Utils.Patterns
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
