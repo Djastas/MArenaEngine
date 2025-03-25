@@ -2,7 +2,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Interactable
+namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components.Interactable
 {
     public class BulletController : NetworkBehaviour
     {

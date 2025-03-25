@@ -3,12 +3,12 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Interactable
+namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components.Interactable
 {
     [RequireComponent(typeof(XRGrabInteractable))]
     public class GunController : NetworkBehaviour
     {
-        [SerializeField] private Transform bulletPos;
+        [SerializeField] private UnityEngine.Transform bulletPos;
         [SerializeField] private GameObject bulletPrefab;
         
         public void Start()

@@ -1,9 +1,11 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Trash
 {
+    /// <summary>
+    /// projects A into the space of object B and calculates the angle ACB
+    /// </summary>
     public class ProjTest : MonoBehaviour
     {
         
