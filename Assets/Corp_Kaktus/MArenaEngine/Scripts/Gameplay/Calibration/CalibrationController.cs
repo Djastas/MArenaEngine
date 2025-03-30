@@ -39,10 +39,10 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Calibration
             
             // -------------- rotation ----------
             var normalizedA =
-                (realPosPointB - _calibrateObject.position).normalized; // relative rotate point on center level
+                (realPosPointB - offset).normalized; // relative rotate point on center level
             
             var normalizedRealA =
-                (pointB.position - _calibrateObject.position).normalized; // relative rotate point on center level
+                (pointB.position).normalized; // relative rotate point on center level
             
             var angle = Vector3.Angle(normalizedA, normalizedRealA);
             var rotationAxis = Vector3.Cross(normalizedA, normalizedRealA).normalized * -1;

@@ -16,7 +16,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Calibration
        
         private void SetActiveCalibrationWorld(bool active)
         {
-            var objectForDisable = FindObjectsByType<DisableWhenCalibrateTag>(FindObjectsSortMode.None);
+            var objectForDisable = FindObjectsByType<DisableWhenCalibrateTag>(FindObjectsInactive.Include,FindObjectsSortMode.None);
+            
             foreach (var o in objectForDisable.Select(i => i.gameObject))
             {
                 o.SetActive(!active);
