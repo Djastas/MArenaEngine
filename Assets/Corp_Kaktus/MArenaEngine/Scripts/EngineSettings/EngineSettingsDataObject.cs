@@ -15,6 +15,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
         
         [Header("Build Settings")] 
         public bool controlClientBuild;
+        public bool useVRSimulator;
         
         [Header("Debug Settings")] 
         public int debugLevel;

@@ -5,14 +5,15 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
     /// <summary>
     /// class for draw one line in game view
     /// </summary>
-    public struct LineDrawer
+    public class LineDrawer
     {
         private LineRenderer _lineRenderer;
         private float _lineSize;
+        private bool _initialized;
 
-        private void Init(float lineSize = 0.05f)
+        public void Init(float lineSize = 0.05f)
         {
-            if (_lineRenderer != null) return;
+            if (_initialized) return;
             
             var lineObj = new GameObject("LineObj");
             _lineRenderer = lineObj.AddComponent<LineRenderer>();
@@ -20,12 +21,12 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
             _lineRenderer.material = new Material(Shader.Find("Hidden/Internal-Colored"));
 
             _lineSize = lineSize;
+            _initialized = true;
         }
 
         //Draws lines through the provided vertices
         public void DrawLineInGameView(Vector3 start, Vector3 end, Color color)
         {
-            if (!_lineRenderer) { Init(); }
 
             //Set color
             _lineRenderer.startColor = color;
