@@ -80,7 +80,7 @@ namespace Build
         public static void Server_DedicatedWindow_Build()
         {
             // setup ----------------
-
+            
             EngineSettings.settings.useVRSimulator = false;
             EngineSettings.settings.controlClientBuild = false;
             
