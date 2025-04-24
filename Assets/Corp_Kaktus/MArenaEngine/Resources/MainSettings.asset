@@ -15,7 +15,7 @@ MonoBehaviour:
   data:
     validate: 1
     controlClientBuild: 0
-    useVRSimulator: 0
+    useVRSimulator: 1
     debugLevel: 2
     clientLoader: {fileID: 0}
     controllerLoader: {fileID: 0}

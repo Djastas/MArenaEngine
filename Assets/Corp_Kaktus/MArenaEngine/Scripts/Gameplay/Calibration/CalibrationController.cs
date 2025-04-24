@@ -53,6 +53,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Calibration
                 _lineDrawerA = new LineDrawer();
                 _lineDrawerB = new LineDrawer();
                 _lineDrawerRotAxis = new LineDrawer();
+                _lineDrawerOffset = new LineDrawer();
                 
                 _lineDrawerA.DrawLineInGameView(offset,offset+normalizedA,Color.red);
                 _lineDrawerB.DrawLineInGameView(offset,offset+normalizedRealA,Color.blue);

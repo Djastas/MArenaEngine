@@ -11,6 +11,11 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
         private float _lineSize;
         private bool _initialized;
 
+        public LineDrawer()
+        {
+            Init();
+        }
+
         public void Init(float lineSize = 0.05f)
         {
             if (_initialized) return;

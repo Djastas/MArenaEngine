@@ -12,6 +12,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components
     public class SpawnController : NetSingleton<SpawnController>
     {
         [SerializeField] private List<GameObject> spawnObjects;
+        [SerializeField] private Transform spawnTransform;
 
         private void Start()
         {
@@ -49,7 +50,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components
         private void OnClientReceiveSpawnIDServerSideRpc(int spawnId, ulong ownerId)
         {
             if (!spawnObjects[spawnId]) { return; }
-            var spawnObject = Instantiate(spawnObjects[spawnId]);
+            var spawnObject = Instantiate(spawnObjects[spawnId],spawnTransform.position, spawnTransform.rotation);
             var instanceNetworkObject = spawnObject.GetComponent<NetworkObject>();
             instanceNetworkObject.SpawnWithOwnership(ownerId);
         }
