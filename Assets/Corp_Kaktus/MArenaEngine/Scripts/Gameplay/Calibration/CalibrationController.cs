@@ -45,7 +45,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Calibration
                 (pointB.position).normalized; // relative rotate point on center level
             
             var angle = Vector3.Angle(normalizedA, normalizedRealA);
-            var rotationAxis = Vector3.Cross(normalizedA, normalizedRealA).normalized * -1;
+            // var rotationAxis = Vector3.Cross(normalizedA, normalizedRealA).normalized * -1;
+            var rotationAxis = Vector3.up;
             
             
             if (  EngineSettings.EngineSettings.settings.debugLevel >= 1)
