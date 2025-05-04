@@ -11,7 +11,10 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components
     {
         private void Start()
         {
-            GetComponent<XRGrabInteractable>().selectEntered.AddListener(ChangeOwnership);
+            var xrGrabInteractable = GetComponent<XRGrabInteractable>();
+            xrGrabInteractable.selectEntered.AddListener(ChangeOwnership);
+            xrGrabInteractable.lastSelectExited.AddListener(_ => { ChangeOwnershipRpc(0); });
+            
         }
 
         private void ChangeOwnership(BaseInteractionEventArgs activateEventArgs)
