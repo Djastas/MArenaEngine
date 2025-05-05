@@ -29,11 +29,18 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
 
         public void SetIp()
         {
-            Network.Utils.Utils.SetIp(ipInputField.text == "" ?  "127.0.0.1": ipInputField.text);
+            Network.Utils.Utils.SetIp(ipInputField.text == "" ? GetLastSuccessIp() : ipInputField.text);
             
             statusText.text = "Connect now...";
             
             var result = NetworkManager.Singleton.StartClient();
+        }
+
+        private string GetLastSuccessIp() => PlayerPrefs.GetString("LastSuccessIp", "127.0.0.1");
+        private void SaveLastSuccessIp(string ip)
+        {
+            PlayerPrefs.SetString("LastSuccessIp", ip);
+            PlayerPrefs.Save();
         }
 
         private void Fail()
@@ -44,6 +51,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
         private void Success()
         {
             statusText.text = "Success connect to server";
+            SaveLastSuccessIp(Network.Utils.Utils.GetUnityTransport().ConnectionData.Address);
             onSuccessConnect?.Invoke();
         }
     }
