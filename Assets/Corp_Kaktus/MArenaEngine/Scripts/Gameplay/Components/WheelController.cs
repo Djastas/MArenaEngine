@@ -19,6 +19,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components
         private void Update()
         {
             if (isLock) { return; }
+
+            if (targetsA == null) { return; }
             
             var middleAngle = 0f;
             
@@ -70,8 +72,12 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components
             for (var index = 0; index < targetsA.Count; index++)
             {
                 targetsA[index].position = targetsStartPos[index].position;
-                
             }
+
+            var angle = CalcAngle(targetsA[0], targetsB[0], transform.position, out var startRotAxis);
+            transform.Rotate(startRotAxis,angle, Space.World);
         }
+
+        public float value => transform.localRotation.eulerAngles.z;
     }
 }
