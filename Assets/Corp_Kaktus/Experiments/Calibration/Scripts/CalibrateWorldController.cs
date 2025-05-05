@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Corp_Kaktus.Experiments.Calibration.Scripts
 {
@@ -11,6 +12,12 @@ namespace Corp_Kaktus.Experiments.Calibration.Scripts
        {
            Calibrator.instance.onCalibrateStart.AddListener(() => { calibrateWorld.SetActive(activateWhenCalibrate); });
            Calibrator.instance.onCalibrateEnd.AddListener(() => { calibrateWorld.SetActive(!activateWhenCalibrate); });
+       }
+
+       private void OnDestroy()
+       {
+           Calibrator.instance.onCalibrateStart.RemoveListener(() => { calibrateWorld.SetActive(activateWhenCalibrate); });
+           Calibrator.instance.onCalibrateEnd.RemoveListener(() => { calibrateWorld.SetActive(!activateWhenCalibrate); });
        }
     }
 }

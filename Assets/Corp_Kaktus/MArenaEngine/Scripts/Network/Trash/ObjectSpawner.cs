@@ -17,7 +17,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Trash
         private void Start()
         {
             if (!NetworkManager.Singleton.IsServer) return;
-            _spawnedObject = Instantiate(prefab,transform.position,transform.rotation,transform);
+            _spawnedObject = Instantiate(prefab,transform.position,transform.rotation);
             var instanceNetworkObject = _spawnedObject.GetComponent<NetworkObject>();
             var instanceReceiver = _spawnedObject.GetComponent<ObjectSpawnReceiver>();
             if (!instanceReceiver)
