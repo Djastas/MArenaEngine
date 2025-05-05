@@ -20,4 +20,6 @@ MonoBehaviour:
     clientLoader: {fileID: 0}
     controllerLoader: {fileID: 0}
     serverLoader: {fileID: 0}
+    loadStartLevel: 1
+    startMainLevel: DemoLevel
     autoLoadEditorHost: 0

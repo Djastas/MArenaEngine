@@ -24,6 +24,9 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
         public GameObject clientLoader;
         public GameObject controllerLoader;
         public GameObject serverLoader;
+
+        public bool loadStartLevel = true;
+        public string startMainLevel = "_";
         
          [Space]
         public bool autoLoadEditorHost;
