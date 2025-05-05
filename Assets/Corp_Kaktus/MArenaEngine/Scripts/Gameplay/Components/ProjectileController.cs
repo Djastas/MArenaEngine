@@ -48,8 +48,11 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components
             {
                 Debug.Log("Missed Collision");
             }
-            
-            Destroy(gameObject);
+
+            if (IsServer)
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void OnDrawGizmosSelected()
