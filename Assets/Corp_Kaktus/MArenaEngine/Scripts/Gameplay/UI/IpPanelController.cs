@@ -21,7 +21,10 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.UI
 
             // todo
             // LoadIPFromRuntimeSettings
-            SetIp();
+            if (EngineSettings.EngineSettings.settings.autoConnect)
+            {
+                SetIp();
+            }
         }
 
         public void SetIp()

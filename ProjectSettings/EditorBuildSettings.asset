@@ -29,13 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Temp4.unity
     guid: f07c8180bc124924c9eb70fcf3e2ee89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Levels/ArenaBlocking.unity
     guid: f788c7528a8a58f4fb8f7244598a467e
   - enabled: 1
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Levels/DemoLevel.unity
     guid: 3445152a69d95d144ae58e232c414226
-  - enabled: 1
+  - enabled: 0
     path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Levels/GamePrototype.unity
     guid: 11208510fe97bb844acf8ef8b8757979
   m_configObjects:

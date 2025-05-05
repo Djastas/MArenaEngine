@@ -28,6 +28,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.EngineSettings
         public bool loadStartLevel = true;
         public string startMainLevel = "_";
         
+        public bool autoConnect = true;
+        
          [Space]
         public bool autoLoadEditorHost;
 

@@ -17,7 +17,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Components.Selectors
 
         private void DisableClientInput()
         {
-            if (!IsClient || IsOwner) return;
+            if (IsOwner) return;
             
             foreach (var o in destroyableObject) { Destroy(o); }
             foreach (var component in disableComponents) { component.enabled = false; }
