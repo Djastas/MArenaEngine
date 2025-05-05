@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7348761668234352524}
   - component: {fileID: 1090725926764948252}
   - component: {fileID: 7523890540983657666}
+  - component: {fileID: 5781165368195482502}
   m_Layer: 0
   m_Name: NetGrabCube
   m_TagString: Untagged
@@ -341,6 +342,18 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   bulletPos: {fileID: 8978082434129627636}
   bulletPrefab: {fileID: 5077528859227211271, guid: bb22572d0e2189445affac3a40a44611, type: 3}
+--- !u!114 &5781165368195482502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492143869882083431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2dca1cdfbe09649b6446dbdd3fcbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6297339622117233701
 GameObject:
   m_ObjectHideFlags: 0
