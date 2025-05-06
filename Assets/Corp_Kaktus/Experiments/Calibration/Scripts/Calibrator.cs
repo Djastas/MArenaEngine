@@ -19,8 +19,8 @@ namespace Corp_Kaktus.Experiments.Calibration.Scripts
         public Vector3 realPosB;
         
         [Header("Events")]
-        public UnityEvent onCalibrateStart;
-        public UnityEvent onCalibrateEnd;
+        public UnityEvent onCalibrateStart = new UnityEvent();
+        public UnityEvent onCalibrateEnd = new UnityEvent();
         
         
         private LineDrawer _offsetA;

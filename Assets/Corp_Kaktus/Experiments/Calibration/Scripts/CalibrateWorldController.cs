@@ -10,14 +10,26 @@ namespace Corp_Kaktus.Experiments.Calibration.Scripts
 
        private void Start()
        {
-           Calibrator.instance.onCalibrateStart.AddListener(() => { calibrateWorld.SetActive(activateWhenCalibrate); });
-           Calibrator.instance.onCalibrateEnd.AddListener(() => { calibrateWorld.SetActive(!activateWhenCalibrate); });
+           Calibrator.instance.onCalibrateStart.AddListener(
+               () => { SetActive(false); });
+           Calibrator.instance.onCalibrateEnd.AddListener(
+               () => { SetActive(true); });
+       }
+
+       public void SetActive(bool invert)
+       {
+           if (calibrateWorld)
+           {
+               calibrateWorld.SetActive(invert ? !activateWhenCalibrate : activateWhenCalibrate); 
+           }
        }
 
        private void OnDestroy()
        {
-           Calibrator.instance.onCalibrateStart.RemoveListener(() => { calibrateWorld.SetActive(activateWhenCalibrate); });
-           Calibrator.instance.onCalibrateEnd.RemoveListener(() => { calibrateWorld.SetActive(!activateWhenCalibrate); });
+           Calibrator.instance.onCalibrateStart.RemoveListener(
+               () => { SetActive(false); });
+           Calibrator.instance.onCalibrateEnd.RemoveListener(
+               () => { SetActive(true); });
        }
     }
 }
