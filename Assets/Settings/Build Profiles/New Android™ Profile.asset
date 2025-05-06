@@ -18,15 +18,15 @@ MonoBehaviour:
   m_PlatformId: b9b35072a6f44c2e863f17467ea3dc13
   m_PlatformBuildProfile:
     rid: 7747354674419466241
-  m_OverrideGlobalSceneList: 0
+  m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 0
     m_path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Temp 3.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Corp_Kaktus/MArenaEngine/Scenes/EntryScene.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Corp_Kaktus/MArenaEngine/Scenes/ConnectScene.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Corp_Kaktus/MArenaEngine/Scenes/GameEntryScene.unity
   - m_enabled: 0
     m_path: Assets/Scenes/BasicScene.unity
@@ -34,8 +34,10 @@ MonoBehaviour:
     m_path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
   - m_enabled: 0
     m_path: Assets/Scenes/SampleScene.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Corp_Kaktus/MArenaEngine/Scenes/Temp4.unity
+  - m_enabled: 1
+    m_path: Assets/Corp_Kaktus/Experiments/PlayerTest.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
@@ -61,7 +63,7 @@ MonoBehaviour:
         m_ExportAsGoogleAndroidProject: 0
         m_DebugSymbolLevel: 1
         m_DebugSymbolFormat: 5
-        m_CurrentDeploymentTargetId: __builtin__target_default
+        m_CurrentDeploymentTargetId: 1WMHH8335M0521
         m_BuildType: 1
         m_BuildAppBundle: 0
         m_IPAddressToConnect: 
