@@ -27,8 +27,18 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components
 
         private void Start()
         {
-            trigger.onEnter.AddListener((go) => {catapultObject.Add(go.GetComponent<Rigidbody>()); });
-            trigger.onExit.AddListener((go) => {catapultObject.Remove(go.GetComponent<Rigidbody>()); });
+            trigger.onEnter.AddListener((go) => {catapultObject.Add(Item(go)); });
+            trigger.onExit.AddListener((go) => {catapultObject.Remove(Item(go)); });
+        }
+
+        private static Rigidbody Item(GameObject go)
+        {
+            var component = go.GetComponent<Rigidbody>();
+            if (component == null)
+            {
+                component = go.GetComponentInParent<Rigidbody>();
+            }
+            return component;
         }
 
         private void Update()

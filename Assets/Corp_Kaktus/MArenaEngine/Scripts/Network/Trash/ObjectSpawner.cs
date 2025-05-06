@@ -1,4 +1,5 @@
 ﻿using Unity.Netcode;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -22,7 +23,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Network.Trash
             var instanceReceiver = _spawnedObject.GetComponent<ObjectSpawnReceiver>();
             if (!instanceReceiver)
             {
-                Debug.LogWarning("Spawn object not contain receiver. OnSpawn event will be not invoked.");
+                Debug.LogWarning("Spawn object not contain receiver. OnSpawn event will be not invoked.",this);
             }
             instanceNetworkObject.Spawn();
         }

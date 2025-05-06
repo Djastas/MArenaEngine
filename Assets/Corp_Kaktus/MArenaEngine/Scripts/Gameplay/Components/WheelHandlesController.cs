@@ -9,7 +9,7 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Gameplay.Components
 
         [SerializeField] private Components.WheelController projector;
 
-        private void Start()
+        private void Awake()
         {
              spawner.onSpawn.AddListener(Init);
         }
