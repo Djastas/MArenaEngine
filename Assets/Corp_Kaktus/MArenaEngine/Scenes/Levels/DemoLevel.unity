@@ -3658,7 +3658,7 @@ MonoBehaviour:
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
-  prefab: {fileID: 3492143869882083431, guid: 53e71221b4d45bc409487535211a0d71, type: 3}
+  prefab: {fileID: 3492143869882083431, guid: 6c679ab0627999a45b3d13afbd23ab2e, type: 3}
 --- !u!43 &1663458417
 Mesh:
   m_ObjectHideFlags: 0
