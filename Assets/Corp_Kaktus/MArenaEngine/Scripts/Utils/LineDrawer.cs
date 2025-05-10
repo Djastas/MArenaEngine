@@ -25,6 +25,8 @@ namespace Corp_Kaktus.MArenaEngine.Scripts.Utils
 
             _lineRenderer.material = new Material(Shader.Find("Hidden/Internal-Colored"));
 
+            _lineRenderer.startWidth = 0.001f;
+            _lineRenderer.endWidth = 0.001f;
             _lineSize = lineSize;
             _initialized = true;
         }
